@@ -1,0 +1,54 @@
+name: "📰 Sync Articles from Supabase"
+
+on:
+  # Run daily at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-articles:
+    name: Sync Articles
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Supabase sync script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: python sync.py
+
+      - name: Commit and push updated articles
+        run: |
+          git add articles/
+          if git diff --cached --quiet; then
+            echo "✅ No changes detected — articles are already up to date."
+          else
+            ARTICLE_COUNT=$(git diff --cached --name-only | wc -l)
+            git commit -m "sync: update ${ARTICLE_COUNT} article(s) from Supabase [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push origin main
+            echo "✅ Pushed $ARTICLE_COUNT updated article(s)."
+          fi
