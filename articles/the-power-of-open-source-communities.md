@@ -3,7 +3,7 @@ title: "The Power of Open Source Communities "
 date: "2026-02-13"
 ---
 
-![The Power of Open Source Communities ](https://res.cloudinary.com/dxlok864h/image/upload/v1771724694/xel-studio/articles/kadfvyvqqmdoydmvax6g.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771724694/xel-studio/articles/kadfvyvqqmdoydmvax6g.jpg" alt="The Power of Open Source Communities " width="100%">
 
 # The Power of Open Source Communities 
 

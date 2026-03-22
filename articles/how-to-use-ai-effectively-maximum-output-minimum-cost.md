@@ -2,7 +2,7 @@
 title: "How to Use AI Effectively: Maximum Output, Minimum Cost"
 ---
 
-![How to Use AI Effectively: Maximum Output, Minimum Cost](https://res.cloudinary.com/dxlok864h/image/upload/v1772043809/xel-studio/articles/rfkn6dwmqnu443qmkp4g.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1772043809/xel-studio/articles/rfkn6dwmqnu443qmkp4g.jpg" alt="How to Use AI Effectively: Maximum Output, Minimum Cost" width="100%">
 
 # How to Use AI Effectively: Maximum Output, Minimum Cost
 

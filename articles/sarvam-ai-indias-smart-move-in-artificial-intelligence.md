@@ -3,7 +3,7 @@ title: "Sarvam AI: India’s Smart Move in Artificial Intelligence*"
 date: "2026-02-13"
 ---
 
-![Sarvam AI: India’s Smart Move in Artificial Intelligence*](https://res.cloudinary.com/dxlok864h/image/upload/v1771604435/xel-studio/articles/lu2kzispcumahqg1wj8l.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771604435/xel-studio/articles/lu2kzispcumahqg1wj8l.jpg" alt="Sarvam AI: India’s Smart Move in Artificial Intelligence*" width="100%">
 
 # Sarvam AI: India’s Smart Move in Artificial Intelligence*
 

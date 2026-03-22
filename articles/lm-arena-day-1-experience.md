@@ -3,7 +3,7 @@ title: "LM Arena – Day 1 Experience"
 date: "2026-02-07"
 ---
 
-![LM Arena – Day 1 Experience](https://res.cloudinary.com/dxlok864h/image/upload/v1771607205/xel-studio/articles/ye1gpry4tk58ygv2tni4.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771607205/xel-studio/articles/ye1gpry4tk58ygv2tni4.jpg" alt="LM Arena – Day 1 Experience" width="100%">
 
 # LM Arena – Day 1 Experience
 

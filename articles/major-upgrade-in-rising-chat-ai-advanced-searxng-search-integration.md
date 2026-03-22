@@ -3,7 +3,7 @@ title: "Major Upgrade in Rising Chat AI – Advanced SearXNG Search Integration 
 category: "Ai"
 ---
 
-![Major Upgrade in Rising Chat AI – Advanced SearXNG Search Integration ](https://res.cloudinary.com/dxlok864h/image/upload/v1773601059/xel-studio/articles/dqwhlwilxnje5b51rkwx.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1773601059/xel-studio/articles/dqwhlwilxnje5b51rkwx.jpg" alt="Major Upgrade in Rising Chat AI – Advanced SearXNG Search Integration " width="100%">
 
 # Major Upgrade in Rising Chat AI – Advanced SearXNG Search Integration 
 

@@ -3,7 +3,7 @@ title: "OpenAI Is Making the Mistakes Facebook Made. I Quit."
 date: "2026-02-13"
 ---
 
-![OpenAI Is Making the Mistakes Facebook Made. I Quit.](https://res.cloudinary.com/dxlok864h/image/upload/v1771604369/xel-studio/articles/x5v259kgl8ebbh12m7ec.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771604369/xel-studio/articles/x5v259kgl8ebbh12m7ec.jpg" alt="OpenAI Is Making the Mistakes Facebook Made. I Quit." width="100%">
 
 # OpenAI Is Making the Mistakes Facebook Made. I Quit.
 

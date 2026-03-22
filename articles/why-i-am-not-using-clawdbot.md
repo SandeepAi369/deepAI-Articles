@@ -3,7 +3,7 @@ title: "**Why I Am Not Using Clawdbot**"
 date: "2026-02-07"
 ---
 
-![**Why I Am Not Using Clawdbot**](https://res.cloudinary.com/dxlok864h/image/upload/v1771606363/xel-studio/articles/atwenfumjxsconlwjqld.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771606363/xel-studio/articles/atwenfumjxsconlwjqld.jpg" alt="**Why I Am Not Using Clawdbot**" width="100%">
 
 # **Why I Am Not Using Clawdbot**
 

@@ -3,7 +3,7 @@ title: " GPT-5.3 Codex and Opus 4.6"
 date: "2026-02-07"
 ---
 
-![ GPT-5.3 Codex and Opus 4.6](https://res.cloudinary.com/dxlok864h/image/upload/v1771607750/xel-studio/articles/qrstyjnfq9hsxqmomtwe.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771607750/xel-studio/articles/qrstyjnfq9hsxqmomtwe.jpg" alt=" GPT-5.3 Codex and Opus 4.6" width="100%">
 
 #  GPT-5.3 Codex and Opus 4.6
 

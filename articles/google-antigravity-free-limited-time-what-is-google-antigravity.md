@@ -4,7 +4,7 @@ date: "2026-01-29"
 category: "Artificial intelligence"
 ---
 
-![Google Antigravity – Free Limited Time? What is Google Antigravity?](https://res.cloudinary.com/dxlok864h/image/upload/v1771607320/xel-studio/articles/mpgf4ybjudpxvuwtggts.jpg)
+<img src="https://res.cloudinary.com/dxlok864h/image/upload/v1771607320/xel-studio/articles/mpgf4ybjudpxvuwtggts.jpg" alt="Google Antigravity – Free Limited Time? What is Google Antigravity?" width="100%">
 
 # Google Antigravity – Free Limited Time? What is Google Antigravity?
 
