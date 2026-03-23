@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit and push updated articles
         run: |
-          git add articles/
+          git add articles/ README.md
           if git diff --cached --quiet; then
             echo "✅ No changes detected — articles are already up to date."
           else
