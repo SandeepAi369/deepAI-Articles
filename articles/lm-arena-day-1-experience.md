@@ -7,6 +7,8 @@ date: "2026-02-07"
 
 # LM Arena – Day 1 Experience
 
+*Feb 07, 2026*
+
 LM Arena is a research-driven platform developed by the LMsys research community, focused on fair and transparent evaluation of large language models (LLMs). It allows users to test AI models through real-world, side-by-side comparisons, giving a clear picture of how each model actually performs. Most importantly, it is completely free and open to everyone.
 
 *Why LM Arena Matters*

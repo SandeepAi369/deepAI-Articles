@@ -7,6 +7,8 @@ date: "2026-02-07"
 
 # **Why I Am Not Using Clawdbot**
 
+*Feb 07, 2026*
+
 I’ve been closely observing the recent hype around Clawdbot (also known as Moltbot), especially after watching several videos that explain its free usage, access to premium AI models, and 24/7 automation setup. Even though it looks powerful and tempting, I haven’t started using it yet. Below is my honest understanding of what Clawdbot is, why many people are excited about it, and why I’m personally cautious about using it right now.
 
 **What Is Clawdbot?**

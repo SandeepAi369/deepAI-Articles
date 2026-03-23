@@ -8,6 +8,8 @@ category: "Artificial intelligence"
 
 # Google Antigravity – Free Limited Time? What is Google Antigravity?
 
+*Jan 29, 2026*
+
 Google Antigravity can be understood clearly through these three core aspects:
 
 1. AI-driven coding environment: It goes beyond being a traditional code editor. Instead of only providing inline suggestions, it integrates advanced AI models to actively assist with development tasks.

@@ -7,6 +7,8 @@ date: "2026-02-13"
 
 # Sarvam AI: India’s Smart Move in Artificial Intelligence*
 
+*Feb 13, 2026*
+
 *What is Sarvam AI?*
 Sarvam AI is an Indian research company building "Foundational AI" specifically for India. Unlike American companies that focus mainly on English, Sarvam is building models from scratch to understand our diverse languages and context properly.
 

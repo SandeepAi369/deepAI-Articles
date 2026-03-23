@@ -7,6 +7,8 @@ date: "2026-02-13"
 
 # OpenAI Is Making the Mistakes Facebook Made. I Quit.
 
+*Feb 13, 2026*
+
 *On February 9, 2026, Zoe Hitzig, a senior researcher who spent two years shaping safety policies at OpenAI, officially resigned. On the same day, she published a serious Op-Ed in the New York Times titled: "OpenAI Is Making the Mistakes Facebook Made. I Quit." Her resignation is a major warning. It confirms that OpenAI is systematically breaking the rules it set for itself, prioritizing profit over its original mission of safety.
 
 *The "Archive of Human Truth" (Zoe’s Warning)*

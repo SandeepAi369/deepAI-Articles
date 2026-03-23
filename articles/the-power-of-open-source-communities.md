@@ -7,6 +7,8 @@ date: "2026-02-13"
 
 # The Power of Open Source Communities 
 
+*Feb 13, 2026*
+
 Let's talk about something most people get wrong about software security. When you try to download an app and see those scary warnings like 'This file may be harmful,' your first instinct is probably to think, 'Nope, this is definitely a virus' and close the browser. So people trust official platforms like Google Play Store, Microsoft Store, or Apple’s App Store instead. But here’s the reality: even these official stores have distributed malware, spyware, and data-stealing apps. Even apps with millions of downloads have later been found quietly collecting user data or showing intrusive ads after an update, long before being removed. There have been cases where apps initially passed store security checks but activated malicious behavior weeks later, exploiting permissions users had already granted. Yes, they eventually fix the issue—but sometimes weeks or months later. By then, thousands of users may already be affected.
 
 *Why Open Source Feels Different*
