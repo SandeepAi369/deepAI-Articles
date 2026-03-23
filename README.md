@@ -90,11 +90,11 @@
   </tr>
   <tr>
     <td align='center' width='33%' valign='top'>
-      <a href='articles/google-antigravity-free-limited-time-what-is-google-antigravity.md'>
-        <img src='https://res.cloudinary.com/dxlok864h/image/upload/v1771607320/xel-studio/articles/mpgf4ybjudpxvuwtggts.jpg' alt='Google Antigravity – Free Limited Time? What is Google Antigravity?' width='300' style='border-radius:8px;object-fit:cover;'>
+      <a href='articles/what-is-google-antigravity-agent-ide.md'>
+        <img src='https://res.cloudinary.com/dxlok864h/image/upload/v1771607320/xel-studio/articles/mpgf4ybjudpxvuwtggts.jpg' alt='What is Google Antigravity? Agent IDE' width='300' style='border-radius:8px;object-fit:cover;'>
       </a>
       <br>
-      <a href='articles/google-antigravity-free-limited-time-what-is-google-antigravity.md'><b>Google Antigravity – Free Limited Time? What is Google Antigravity?</b></a>
+      <a href='articles/what-is-google-antigravity-agent-ide.md'><b>What is Google Antigravity? Agent IDE</b></a>
       <br>
       <sub>📅 Jan 29, 2026</sub>
     </td>
