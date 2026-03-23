@@ -12,6 +12,7 @@ import re
 import requests
 import textwrap
 import base64
+import html
 
 # ─── Config ──────────────────────────────────────────────
 SUPABASE_URL = os.environ["SUPABASE_URL"]
@@ -133,26 +134,26 @@ def generate_svg_card(article, filename, cards_dir):
             
     # Wrap text to ~35 characters
     lines = textwrap.wrap(title, width=35)[:2]
-    title_line1 = lines[0] if len(lines) > 0 else "Untitled"
-    title_line2 = lines[1] if len(lines) > 1 else ""
+    title_line1 = html.escape(lines[0] if len(lines) > 0 else "Untitled")
+    title_line2 = html.escape(lines[1] if len(lines) > 1 else "")
     if len(textwrap.wrap(title, width=35)) > 2:
-        title_line2 = title_line2[:-3] + "..."
+        title_line2 = html.escape(lines[1][:-3] + "...")
         
-    svg = f'''<svg width="300" height="240" xmlns="http://www.w3.org/2000/svg">
+    svg = f'''<svg width="320" height="250" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="img-clip">
-      <path d="M0,10 a10,10 0 0 1 10,-10 h280 a10,10 0 0 1 10,10 v140 h-300 v-140 z" />
+      <path d="M10,10 a10,10 0 0 1 10,-10 h280 a10,10 0 0 1 10,10 v140 h-300 v-140 z" />
     </clipPath>
     <filter id="shadow">
       <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.2"/>
     </filter>
   </defs>
-  <rect width="296" height="236" x="2" y="2" fill="#1c1c1c" rx="10" filter="url(#shadow)" />
-  <rect width="296" height="236" x="2" y="2" fill="#1c1c1c" rx="10" stroke="#333" stroke-width="1" />
-  <image href="{b64_img}" x="2" y="2" width="296" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#img-clip)"/>
-  <text x="15" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line1}</text>
-  <text x="15" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line2}</text>
-  <text x="15" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#aaaaaa">📅 {date}</text>
+  <rect width="296" height="236" x="12" y="5" fill="#1c1c1c" rx="10" filter="url(#shadow)" />
+  <rect width="296" height="236" x="12" y="5" fill="#1c1c1c" rx="10" stroke="#333" stroke-width="1" />
+  <image href="{b64_img}" x="12" y="5" width="296" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#img-clip)"/>
+  <text x="25" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line1}</text>
+  <text x="25" y="207" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line2}</text>
+  <text x="25" y="229" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#aaaaaa">📅 {date}</text>
 </svg>'''
 
     card_name = filename.replace(".md", ".svg")
@@ -176,7 +177,7 @@ def build_gallery_readme(articles: list, article_filenames: dict, cards_dir: str
     lines.append("")
 
     for art in articles:
-        title = art.get("title", "Untitled")
+        title = art.get("title", "").strip() or "Untitled"
         filename = article_filenames.get(title, "")
         if not filename:
             continue
@@ -189,7 +190,7 @@ def build_gallery_readme(articles: list, article_filenames: dict, cards_dir: str
         
         # Output inline image anchor (wraps automatically on mobile!)
         lines.append(f"  <a href='{link}' style='text-decoration:none;'>")
-        lines.append(f"    <img src='{svg_path}' width='300' alt='{title}' style='margin: 10px;'>")
+        lines.append(f"    <img src='{svg_path}' width='320' alt='{html.escape(title)}'>")
         lines.append(f"  </a>")
 
     lines.append("")
