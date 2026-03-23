@@ -10,6 +10,8 @@ READ-ONLY access to Supabase.
 import os
 import re
 import requests
+import textwrap
+import base64
 
 # ─── Config ──────────────────────────────────────────────
 SUPABASE_URL = os.environ["SUPABASE_URL"]
@@ -112,7 +114,54 @@ def build_markdown(article: dict) -> str:
     return "\n".join(lines)
 
 
-def build_gallery_readme(articles: list, article_filenames: dict) -> str:
+def generate_svg_card(article, filename, cards_dir):
+    """Generate a responsive SVG card embedding the Cloudinary image and text."""
+    title = article.get("title", "Untitled")
+    date = format_date(article.get('date', ''))
+    image_url = fix_cloudinary_url(article.get("image", ""))
+    
+    b64_img = ""
+    if image_url:
+        try:
+            r = requests.get(image_url, timeout=10)
+            if r.status_code == 200:
+                ctype = r.headers.get("Content-Type", "image/jpeg")
+                b64_img = "data:" + ctype + ";base64," + base64.b64encode(r.content).decode('utf-8')
+        except Exception as e:
+            print(f"    ⚠️ Failed to download image for SVG: {e}")
+            pass
+            
+    # Wrap text to ~35 characters
+    lines = textwrap.wrap(title, width=35)[:2]
+    title_line1 = lines[0] if len(lines) > 0 else "Untitled"
+    title_line2 = lines[1] if len(lines) > 1 else ""
+    if len(textwrap.wrap(title, width=35)) > 2:
+        title_line2 = title_line2[:-3] + "..."
+        
+    svg = f'''<svg width="300" height="240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="img-clip">
+      <path d="M0,10 a10,10 0 0 1 10,-10 h280 a10,10 0 0 1 10,10 v140 h-300 v-140 z" />
+    </clipPath>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="296" height="236" x="2" y="2" fill="#1c1c1c" rx="10" filter="url(#shadow)" />
+  <rect width="296" height="236" x="2" y="2" fill="#1c1c1c" rx="10" stroke="#333" stroke-width="1" />
+  <image href="{b64_img}" x="2" y="2" width="296" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#img-clip)"/>
+  <text x="15" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line1}</text>
+  <text x="15" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">{title_line2}</text>
+  <text x="15" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#aaaaaa">📅 {date}</text>
+</svg>'''
+
+    card_name = filename.replace(".md", ".svg")
+    filepath = os.path.join(cards_dir, card_name)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(svg)
+    return card_name
+
+def build_gallery_readme(articles: list, article_filenames: dict, cards_dir: str) -> str:
     """Build the root README.md as a visual article gallery."""
     lines = []
 
@@ -123,42 +172,28 @@ def build_gallery_readme(articles: list, article_filenames: dict) -> str:
     lines.append(f"**{len(articles)} Articles**")
     lines.append("")
     lines.append("---")
+    lines.append("<div align='center'>")
     lines.append("")
 
-    # HTML table — 3 columns
-    COLS = 3
-    lines.append("<table>")
+    for art in articles:
+        title = art.get("title", "Untitled")
+        filename = article_filenames.get(title, "")
+        if not filename:
+            continue
+            
+        link = f"articles/{filename}"
+        
+        # Generate SVG card
+        svg_name = generate_svg_card(art, filename, cards_dir)
+        svg_path = f"articles/cards/{svg_name}"
+        
+        # Output inline image anchor (wraps automatically on mobile!)
+        lines.append(f"  <a href='{link}' style='text-decoration:none;'>")
+        lines.append(f"    <img src='{svg_path}' width='300' alt='{title}' style='margin: 10px;'>")
+        lines.append(f"  </a>")
 
-    for i in range(0, len(articles), COLS):
-        chunk = articles[i : i + COLS]
-        lines.append("  <tr>")
-
-        for art in chunk:
-            title = art.get("title", "Untitled")
-            image_url = fix_cloudinary_url(art.get("image", ""))
-            date = format_date(art.get("date", ""))
-            filename = article_filenames.get(title, "")
-            link = f"articles/{filename}" if filename else "#"
-
-            lines.append("    <td align='center' width='33%' valign='top'>")
-            if image_url:
-                lines.append(f"      <a href='{link}'>")
-                lines.append(f"        <img src='{image_url}' alt='{title}' width='300' style='border-radius:8px;object-fit:cover;'>")
-                lines.append(f"      </a>")
-                lines.append(f"      <br>")
-            lines.append(f"      <a href='{link}'><b>{title}</b></a>")
-            if date:
-                lines.append(f"      <br>")
-                lines.append(f"      <sub>📅 {date}</sub>")
-            lines.append("    </td>")
-
-        # Pad incomplete rows with empty cells
-        for _ in range(COLS - len(chunk)):
-            lines.append("    <td></td>")
-
-        lines.append("  </tr>")
-
-    lines.append("</table>")
+    lines.append("")
+    lines.append("</div>")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -169,6 +204,8 @@ def build_gallery_readme(articles: list, article_filenames: dict) -> str:
 
 def sync():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    cards_dir = os.path.join(OUTPUT_DIR, "cards")
+    os.makedirs(cards_dir, exist_ok=True)
 
     articles = fetch_articles()
     if not articles:
@@ -197,7 +234,7 @@ def sync():
         written += 1
 
     # Step 2: OVERWRITE root README.md with gallery
-    readme_content = build_gallery_readme(articles, article_filenames)
+    readme_content = build_gallery_readme(articles, article_filenames, cards_dir)
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
     print(f"\n🎨 Gallery README.md overwritten at repo root with {written} articles.")
