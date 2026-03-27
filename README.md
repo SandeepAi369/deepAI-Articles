@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**10 Articles**
+**11 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/swift-search-agent-i-published-the-code.md' style='text-decoration:none;'>
+    <img src='articles/cards/swift-search-agent-i-published-the-code.svg' width='320' alt='Swift Search Agent I published the code.'>
+  </a>
   <a href='articles/metas-llama-5-avocado-what-is-really-happening.md' style='text-decoration:none;'>
     <img src='articles/cards/metas-llama-5-avocado-what-is-really-happening.svg' width='320' alt='Meta’s Llama 5 (Avocado): What Is Really Happening?'>
   </a>
