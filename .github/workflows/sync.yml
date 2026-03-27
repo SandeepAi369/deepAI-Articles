@@ -1,9 +1,12 @@
 name: "📰 Sync Articles from Supabase"
 
 on:
-  # Run daily at midnight UTC
+  # Run 3x daily at IST 6:00 AM, 6:00 PM, and midnight
+  # IST = UTC + 5:30, so: 6AM IST = 0:30 UTC, 6PM IST = 12:30 UTC, 12AM IST = 18:30 UTC
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "30 0 * * *"   # IST 6:00 AM
+    - cron: "30 12 * * *"  # IST 6:00 PM
+    - cron: "30 18 * * *"  # IST 12:00 Midnight
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:
 
