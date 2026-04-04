@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**11 Articles**
+**12 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow.svg' width='320' alt='The Shift to Agentic AI: Becoming the CEO of Your AI Workflow'>
+  </a>
   <a href='articles/swift-search-agent-i-published-the-code.md' style='text-decoration:none;'>
     <img src='articles/cards/swift-search-agent-i-published-the-code.svg' width='320' alt='Swift Search Agent I published the code.'>
   </a>
