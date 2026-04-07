@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**12 Articles**
+**13 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-biggest-leak-in-ai-history-anthropics-secret-claude-code-exposed.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-biggest-leak-in-ai-history-anthropics-secret-claude-code-exposed.svg' width='320' alt='The Biggest Leak in AI History: Anthropic&#x27;s Secret Claude Code Exposed.'>
+  </a>
   <a href='articles/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow.md' style='text-decoration:none;'>
     <img src='articles/cards/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow.svg' width='320' alt='The Shift to Agentic AI: Becoming the CEO of Your AI Workflow'>
   </a>
