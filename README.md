@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**13 Articles**
+**14 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/meta-ai-llama-5-replaced-by-muse-spark-a-clear-honest-review.md' style='text-decoration:none;'>
+    <img src='articles/cards/meta-ai-llama-5-replaced-by-muse-spark-a-clear-honest-review.svg' width='320' alt='Meta AI LLaMA 5 Replaced by Muse Spark: A Clear, Honest Review'>
+  </a>
   <a href='articles/the-biggest-leak-in-ai-history-anthropics-secret-claude-code-exposed.md' style='text-decoration:none;'>
     <img src='articles/cards/the-biggest-leak-in-ai-history-anthropics-secret-claude-code-exposed.svg' width='320' alt='The Biggest Leak in AI History: Anthropic&#x27;s Secret Claude Code Exposed.'>
   </a>
