@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**14 Articles**
+**15 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow-part-1.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow-part-1.svg' width='320' alt='The Shift to Agentic AI: Becoming the CEO of Your AI Workflow part 1'>
+  </a>
   <a href='articles/meta-ai-llama-5-replaced-by-muse-spark-a-clear-honest-review.md' style='text-decoration:none;'>
     <img src='articles/cards/meta-ai-llama-5-replaced-by-muse-spark-a-clear-honest-review.svg' width='320' alt='Meta AI LLaMA 5 Replaced by Muse Spark: A Clear, Honest Review'>
   </a>
