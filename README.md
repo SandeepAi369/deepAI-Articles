@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**15 Articles**
+**16 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-shift-to-agentic-ai-part-2-enter-langgraph-meet-the-boss.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-shift-to-agentic-ai-part-2-enter-langgraph-meet-the-boss.svg' width='320' alt='The Shift to Agentic AI Part 2: Enter LangGraph - Meet &quot;The Boss&quot;'>
+  </a>
   <a href='articles/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow-part-1.md' style='text-decoration:none;'>
     <img src='articles/cards/the-shift-to-agentic-ai-becoming-the-ceo-of-your-ai-workflow-part-1.svg' width='320' alt='The Shift to Agentic AI: Becoming the CEO of Your AI Workflow part 1'>
   </a>
