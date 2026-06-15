@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**16 Articles**
+**17 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/anthropic-fable-5-review-agent-first-ide-release-update.md' style='text-decoration:none;'>
+    <img src='articles/cards/anthropic-fable-5-review-agent-first-ide-release-update.svg' width='320' alt='Anthropic Fable 5 Review &amp; Agent First IDE Release Update'>
+  </a>
   <a href='articles/the-shift-to-agentic-ai-part-2-enter-langgraph-meet-the-boss.md' style='text-decoration:none;'>
     <img src='articles/cards/the-shift-to-agentic-ai-part-2-enter-langgraph-meet-the-boss.svg' width='320' alt='The Shift to Agentic AI Part 2: Enter LangGraph - Meet &quot;The Boss&quot;'>
   </a>
