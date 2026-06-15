@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**17 Articles**
+**18 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/gemini-35-flash-vs-31-pro-ground-reality-vs-benchmark-hype.md' style='text-decoration:none;'>
+    <img src='articles/cards/gemini-35-flash-vs-31-pro-ground-reality-vs-benchmark-hype.svg' width='320' alt='Gemini 3.5 Flash vs. 3.1 Pro: Ground Reality vs. Benchmark Hype'>
+  </a>
   <a href='articles/anthropic-fable-5-review-agent-first-ide-release-update.md' style='text-decoration:none;'>
     <img src='articles/cards/anthropic-fable-5-review-agent-first-ide-release-update.svg' width='320' alt='Anthropic Fable 5 Review &amp; Agent First IDE Release Update'>
   </a>
