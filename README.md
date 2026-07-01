@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**18 Articles**
+**19 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/recently-released-agent-first-browse-the-autonomous-ai-web-agent.md' style='text-decoration:none;'>
+    <img src='articles/cards/recently-released-agent-first-browse-the-autonomous-ai-web-agent.svg' width='320' alt='**Recently Released: &#x27;Agent First Browse&#x27; The Autonomous AI Web Agent**'>
+  </a>
   <a href='articles/gemini-35-flash-vs-31-pro-ground-reality-vs-benchmark-hype.md' style='text-decoration:none;'>
     <img src='articles/cards/gemini-35-flash-vs-31-pro-ground-reality-vs-benchmark-hype.svg' width='320' alt='Gemini 3.5 Flash vs. 3.1 Pro: Ground Reality vs. Benchmark Hype'>
   </a>
