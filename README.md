@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**19 Articles**
+**20 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/how-anthropic-caught-data-thieves-the-secret-steganography-in-claude-code.md' style='text-decoration:none;'>
+    <img src='articles/cards/how-anthropic-caught-data-thieves-the-secret-steganography-in-claude-code.svg' width='320' alt='How Anthropic Caught Data Thieves: The Secret Steganography in Claude Code'>
+  </a>
   <a href='articles/recently-released-agent-first-browse-the-autonomous-ai-web-agent.md' style='text-decoration:none;'>
     <img src='articles/cards/recently-released-agent-first-browse-the-autonomous-ai-web-agent.svg' width='320' alt='**Recently Released: &#x27;Agent First Browse&#x27; The Autonomous AI Web Agent**'>
   </a>
