@@ -1,0 +1,49 @@
+name: "📡 Syndicate Article"
+
+on:
+  repository_dispatch:
+    types: [syndicate-article]
+  workflow_dispatch:
+    inputs:
+      article_id:
+        description: "Supabase article ID to syndicate"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  syndicate:
+    name: Publish to Platforms
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run syndication
+        env:
+          # Article identifier (from dispatch payload or manual input)
+          ARTICLE_ID: ${{ github.event.client_payload.article_id || github.event.inputs.article_id }}
+          # Supabase (read-only)
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          # Platform API keys (each is optional — unconfigured platforms are skipped)
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          MEDIUM_TOKEN: ${{ secrets.MEDIUM_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          REDDIT_SUBREDDITS: ${{ secrets.REDDIT_SUBREDDITS }}
+        run: python syndicate.py
