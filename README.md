@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**22 Articles**
+**23 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/how-i-saved-over-15000-annually-for-a-business.md' style='text-decoration:none;'>
+    <img src='articles/cards/how-i-saved-over-15000-annually-for-a-business.svg' width='320' alt='How I Saved Over ₹15,000 Annually for a Business?'>
+  </a>
   <a href='articles/kimi-k3-vs-claude-fable-5-vs-gpt-56-sol-leaderboards-and-real-experience.md' style='text-decoration:none;'>
     <img src='articles/cards/kimi-k3-vs-claude-fable-5-vs-gpt-56-sol-leaderboards-and-real-experience.svg' width='320' alt='Kimi K3 vs Claude Fable 5 vs GPT-5.6 Sol: Leaderboards and Real Experience?'>
   </a>
