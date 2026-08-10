@@ -33,3 +33,5 @@ The Result
 The old service plan is expiring soon, after which I will take full control of the domain. 
 
 Bottom line: all frequent update charges, backend costs, and hosting bills are now zeroed out. The annual expense has plummeted from over ₹15,000 to just the ₹2,500 domain fee, leaving behind a free, yet far more powerful infrastructure.
+
+Website link https://globaltekfinancialservices.netlify.app/
