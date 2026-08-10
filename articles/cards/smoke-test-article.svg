@@ -1,0 +1,16 @@
+<svg width="320" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="img-clip">
+      <path d="M10,10 a10,10 0 0 1 10,-10 h280 a10,10 0 0 1 10,10 v140 h-300 v-140 z" />
+    </clipPath>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="296" height="236" x="12" y="5" fill="#1c1c1c" rx="10" filter="url(#shadow)" />
+  <rect width="296" height="236" x="12" y="5" fill="#1c1c1c" rx="10" stroke="#333" stroke-width="1" />
+  <image href="" x="12" y="5" width="296" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#img-clip)"/>
+  <text x="25" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff">Smoke test article</text>
+  <text x="25" y="207" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff"></text>
+  <text x="25" y="229" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#aaaaaa">📅 Aug 10, 2026</text>
+</svg>
