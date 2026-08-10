@@ -2,14 +2,11 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**23 Articles**
+**22 Articles**
 
 ---
 <div align='center'>
 
-  <a href='articles/smoke-test-article.md' style='text-decoration:none;'>
-    <img src='articles/cards/smoke-test-article.svg' width='320' alt='Smoke test article'>
-  </a>
   <a href='articles/kimi-k3-vs-claude-fable-5-vs-gpt-56-sol-leaderboards-and-real-experience.md' style='text-decoration:none;'>
     <img src='articles/cards/kimi-k3-vs-claude-fable-5-vs-gpt-56-sol-leaderboards-and-real-experience.svg' width='320' alt='Kimi K3 vs Claude Fable 5 vs GPT-5.6 Sol: Leaderboards and Real Experience?'>
   </a>
