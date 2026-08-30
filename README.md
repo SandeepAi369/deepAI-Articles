@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**23 Articles**
+**24 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/is-the-us-trying-to-stop-ai-innovation.md' style='text-decoration:none;'>
+    <img src='articles/cards/is-the-us-trying-to-stop-ai-innovation.svg' width='320' alt='Is the US Trying to Stop AI Innovation?'>
+  </a>
   <a href='articles/how-i-saved-over-15000-annually-for-a-business.md' style='text-decoration:none;'>
     <img src='articles/cards/how-i-saved-over-15000-annually-for-a-business.svg' width='320' alt='How I Saved Over ₹15,000 Annually for a Business?'>
   </a>
