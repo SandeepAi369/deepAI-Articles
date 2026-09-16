@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**24 Articles**
+**25 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/is-slowing-down-ai-actually-possible-a-personal-opinion.md' style='text-decoration:none;'>
+    <img src='articles/cards/is-slowing-down-ai-actually-possible-a-personal-opinion.svg' width='320' alt='Is Slowing Down AI Actually Possible? A Personal Opinion'>
+  </a>
   <a href='articles/is-the-us-trying-to-stop-ai-innovation.md' style='text-decoration:none;'>
     <img src='articles/cards/is-the-us-trying-to-stop-ai-innovation.svg' width='320' alt='Is the US Trying to Stop AI Innovation?'>
   </a>
