@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**25 Articles**
+**26 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-0-architecture-a-10-15-year-free-website-for-victory-youth.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-0-architecture-a-10-15-year-free-website-for-victory-youth.svg' width='320' alt='The ₹0 Architecture: A 10-15 Year Free Website for &#x27;Victory Youth'>
+  </a>
   <a href='articles/is-slowing-down-ai-actually-possible-a-personal-opinion.md' style='text-decoration:none;'>
     <img src='articles/cards/is-slowing-down-ai-actually-possible-a-personal-opinion.svg' width='320' alt='Is Slowing Down AI Actually Possible? A Personal Opinion'>
   </a>
