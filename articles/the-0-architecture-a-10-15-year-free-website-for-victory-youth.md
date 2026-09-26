@@ -6,7 +6,7 @@ title: "The ₹0 Architecture: A 10-15 Year Free Website for 'Victory Youth"
 
 # The ₹0 Architecture: A 10-15 Year Free Website for 'Victory Youth
 
-'Relying on paper receipts for community donations is highly impractical. Every festival season brings the same chaos—lost notes and untraceable calculations. At scale, this isn't just about money; it's about memory and trust. Due to an urgent requirement, I needed a permanent, foolproof system for "Victory Youth," a youth group I am personally part of. The brief was simple: securely store and categorize every donation permanently. I built the entire project using Next.js (my strictly preferred JavaScript framework) with one goal: build a heavy-duty digital platform that runs for the next 10-15 years on a strict zero-budget—not as an afterthought, but as the core architecture.
+Relying on paper receipts for community donations is highly impractical. Every festival season brings the same chaos—lost notes and untraceable calculations. At scale, this isn't just about money; it's about memory and trust. Due to an urgent requirement, I needed a permanent, foolproof system for "Victory Youth," a youth group I am personally part of. The brief was simple: securely store and categorize every donation permanently. I built the entire project using Next.js (my strictly preferred JavaScript framework) with one goal: build a heavy-duty digital platform that runs for the next 10-15 years on a strict zero-budget—not as an afterthought, but as the core architecture.
 
 Like my previous project, Xel Studio, everything is managed from a private backend admin panel, keeping the frontend completely transparent. To ensure maximum performance without server bloat, the backend is smartly divided:
 
@@ -21,5 +21,11 @@ I’ll be brutally honest—I am deep into the R&D of my massive main project, "
 * The MIT License Future: Designing for zero cost from day one proves you can build something genuinely reliable. Given its robustness, I will eventually open-source this codebase under the MIT License so any NGO or developer can build a zero-server-cost website for free.
 
 Since this site isn't on Google Search Console yet, it won't appear in direct searches. 
+
+To check out this website:
+Search for Xel Studio on any browser, go to the Articles section, and open this exact post. Scroll to the very bottom, long-press the URL, and tap the "Open" button to check it out directly.
+
+Keep building, keep exploring!
+Best regards, Rising stars
 
 Website link https://victory-youth.sandeepmudhiraj7500.workers.dev/
