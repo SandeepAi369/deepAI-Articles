@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**26 Articles**
+**27 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/claude-sonnet-55-vs-opus-55-a-real-world-verdict.md' style='text-decoration:none;'>
+    <img src='articles/cards/claude-sonnet-55-vs-opus-55-a-real-world-verdict.svg' width='320' alt='Claude Sonnet 5.5 vs Opus 5.5: A Real-World Verdict?'>
+  </a>
   <a href='articles/the-0-architecture-a-10-15-year-free-website-for-victory-youth.md' style='text-decoration:none;'>
     <img src='articles/cards/the-0-architecture-a-10-15-year-free-website-for-victory-youth.svg' width='320' alt='The ₹0 Architecture: A 10-15 Year Free Website for &#x27;Victory Youth'>
   </a>
