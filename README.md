@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**27 Articles**
+**28 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/a-narrow-escape-from-a-supply-chain-attack.md' style='text-decoration:none;'>
+    <img src='articles/cards/a-narrow-escape-from-a-supply-chain-attack.svg' width='320' alt='A Narrow Escape from a Supply Chain Attack'>
+  </a>
   <a href='articles/claude-sonnet-55-vs-opus-55-a-real-world-verdict.md' style='text-decoration:none;'>
     <img src='articles/cards/claude-sonnet-55-vs-opus-55-a-real-world-verdict.svg' width='320' alt='Claude Sonnet 5.5 vs Opus 5.5: A Real-World Verdict?'>
   </a>
