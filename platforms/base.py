@@ -1,17 +1,31 @@
 """
-Abstract base class for all syndication platforms.
+Abstract base class for all link-sharing platforms.
 
-Every platform module MUST implement:
+Platforms share a link back to the canonical XeL Studio article
+(they never re-host the full article). Every platform module MUST implement:
   - name (str)
-  - is_configured() -> bool
-  - publish(title, body_md, category, canonical_url, image_url) -> str | None
+  - is_configured() -> bool       (True only when its GitHub secrets exist)
+  - share(item) -> str | None     (returns the post URL, or None on failure)
 """
 
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class FeedItem:
+    """One article from the public XeL Studio articles feed."""
+
+    url: str          # canonical https://xel-studio.vercel.app/articles/<id>
+    title: str
+    summary: str
+    published: str    # RFC 822 date string from the feed
+    category: str = ""
+    image_url: str = ""
 
 
 class BasePlatform(ABC):
-    """Contract for a syndication target."""
+    """Contract for a link-sharing target."""
 
     name: str = "unknown"
 
@@ -21,20 +35,13 @@ class BasePlatform(ABC):
         ...
 
     @abstractmethod
-    def publish(
-        self,
-        title: str,
-        body_md: str,
-        category: str,
-        canonical_url: str,
-        image_url: str | None = None,
-    ) -> str | None:
+    def share(self, item: FeedItem) -> str | None:
         """
-        Publish the article to this platform.
+        Share the article link on this platform.
 
-        Returns the published URL on success, or None on failure.
-        Implementations MUST handle their own errors (try/except)
-        and print diagnostic messages — a failure here must never
-        crash the orchestrator or block other platforms.
+        Returns the post URL on success, or None on failure.
+        Implementations MUST handle their own errors and print a
+        diagnostic — a failure must never crash the orchestrator.
+        The orchestrator retries failed shares on the next run.
         """
         ...
