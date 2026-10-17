@@ -140,6 +140,14 @@
       "title": "A Narrow Escape from a Supply Chain Attack",
       "first_seen": "2026-10-17T10:59:29Z",
       "seeded": true
+    },
+    "https://xel-studio.vercel.app/articles/1792237613155-yp42x1gcq": {
+      "title": "Hello",
+      "first_seen": "2026-10-17T11:47:04Z",
+      "done": {
+        "indexnow": "2026-10-17T11:47:04Z",
+        "websub": "2026-10-17T11:47:06Z"
+      }
     }
   }
 }
