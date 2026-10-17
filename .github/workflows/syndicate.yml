@@ -1,23 +1,33 @@
-name: "📡 Syndicate Article"
+name: "📡 Syndicate Articles"
+
+# Feed-driven: reads the public XeL Studio articles feed and handles every
+# article not yet in syndication/ledger.json. Triggered instantly by the
+# website on publish, plus a scheduled backstop that catches missed dispatches.
 
 on:
   repository_dispatch:
     types: [syndicate-article]
+  schedule:
+    - cron: "17 */6 * * *"   # every 6 hours (backstop)
   workflow_dispatch:
     inputs:
-      article_id:
-        description: "Supabase article ID to syndicate"
-        required: true
-        type: string
+      dry_run:
+        description: "Log what would happen without pinging, sharing, or committing"
+        type: boolean
+        default: false
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: syndicate
+  cancel-in-progress: false
 
 jobs:
   syndicate:
-    name: Publish to Platforms
+    name: Discovery pings + link sharing
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -26,24 +36,30 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run syndication
+      - name: Run syndication (stdlib only, no installs)
+        id: run
         env:
-          # Article identifier (from dispatch payload or manual input)
-          ARTICLE_ID: ${{ github.event.client_payload.article_id || github.event.inputs.article_id }}
-          # Supabase (read-only)
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-          # Platform API keys (each is optional — unconfigured platforms are skipped)
-          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          MEDIUM_TOKEN: ${{ secrets.MEDIUM_TOKEN }}
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
-          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
-          REDDIT_SUBREDDITS: ${{ secrets.REDDIT_SUBREDDITS }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          # Link-sharing platform secrets go here once a platform module exists.
         run: python syndicate.py
+
+      - name: Commit ledger
+        # Runs even when a step failed, so successes are never re-posted.
+        if: always() && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add syndication/ledger.json 2>/dev/null || exit 0
+          if git diff --cached --quiet; then
+            echo "Ledger unchanged."
+            exit 0
+          fi
+          git commit -m "syndication: update ledger [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "::error::Could not push the ledger after 3 attempts"
+          exit 1

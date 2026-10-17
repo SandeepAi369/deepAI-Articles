@@ -1,23 +1,22 @@
 """
 Platform Registry — deepAI-Articles Syndication Pipeline
 
-Plug-and-play architecture: to add a new platform, create a module
-in this package implementing BasePlatform, then register it here.
+Plug-and-play: to add a link-sharing platform (e.g. Bluesky, Mastodon,
+Telegram), create a module in this package implementing BasePlatform,
+then add an instance to ALL_PLATFORMS. Unconfigured platforms (no
+GitHub secrets) are skipped, so a new module is safe to merge before
+its tokens exist.
+
+No platforms are registered yet: the pipeline currently runs only the
+credential-free discovery pings (IndexNow, WebSub) in syndicate.py.
 """
 
-from platforms.devto import DevToPlatform
-from platforms.medium import MediumPlatform
-from platforms.reddit import RedditPlatform
-from platforms.hashnode import HashnodePlatform
+from platforms.base import BasePlatform
 
-ALL_PLATFORMS = [
-    DevToPlatform(),
-    MediumPlatform(),
-    RedditPlatform(),
-    HashnodePlatform(),
-]
+ALL_PLATFORMS: list[BasePlatform] = []
 
-def get_configured_platforms():
+
+def get_configured_platforms() -> list[BasePlatform]:
     """Return only platforms whose required env vars are set."""
     configured = []
     for p in ALL_PLATFORMS:
