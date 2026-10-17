@@ -1,0 +1,31 @@
+name: "🤖 AI Readability Check"
+
+# Fetches the newest XeL Studio articles from GitHub's datacenter IPs with
+# AI-crawler user agents and fails if any article isn't fully readable
+# without JavaScript. Read-only: public URLs, no secrets, no commits.
+
+on:
+  schedule:
+    - cron: "41 3 * * *"   # daily
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: "How many of the newest articles to check"
+        default: "5"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check articles (stdlib only, no installs)
+        env:
+          MAX_ARTICLES: ${{ github.event.inputs.max_articles || '5' }}
+        run: python readability_check.py
