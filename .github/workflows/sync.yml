@@ -52,6 +52,13 @@ jobs:
           else
             ARTICLE_COUNT=$(git diff --cached --name-only | wc -l)
             git commit -m "sync: update ${ARTICLE_COUNT} article(s) from Supabase [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-            git push origin main
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin HEAD:main && break
+              if [ "$i" -eq 3 ]; then
+                echo "::error::Could not push updated articles after 3 attempts"
+                exit 1
+              fi
+              sleep 5
+            done
             echo "✅ Pushed $ARTICLE_COUNT updated article(s)."
           fi
