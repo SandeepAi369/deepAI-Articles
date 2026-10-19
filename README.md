@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**28 Articles**
+**29 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/secrets-hiding-in-commit-history-and-github-supports-silence.md' style='text-decoration:none;'>
+    <img src='articles/cards/secrets-hiding-in-commit-history-and-github-supports-silence.svg' width='320' alt='Secrets hiding in commit history, and GitHub Support&#x27;s silence'>
+  </a>
   <a href='articles/a-narrow-escape-from-a-supply-chain-attack.md' style='text-decoration:none;'>
     <img src='articles/cards/a-narrow-escape-from-a-supply-chain-attack.svg' width='320' alt='A Narrow Escape from a Supply Chain Attack'>
   </a>
