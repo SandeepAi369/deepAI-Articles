@@ -52,6 +52,14 @@ jobs:
           else
             ARTICLE_COUNT=$(git diff --cached --name-only | wc -l)
             git commit -m "sync: update ${ARTICLE_COUNT} article(s) from Supabase [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-            git push origin main
-            echo "✅ Pushed $ARTICLE_COUNT updated article(s)."
+            # Syndicate can push its ledger at the same moment; rebase and retry
+            for i in 1 2 3; do
+              if git pull --rebase origin main && git push origin HEAD:main; then
+                echo "✅ Pushed $ARTICLE_COUNT updated article(s)."
+                exit 0
+              fi
+              sleep 5
+            done
+            echo "::error::Could not push synced articles after 3 attempts"
+            exit 1
           fi
