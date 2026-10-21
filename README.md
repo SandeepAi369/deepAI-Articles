@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**29 Articles**
+**30 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-biggest-problem-with-gemini-4-argon-it-thinks-too-much.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-biggest-problem-with-gemini-4-argon-it-thinks-too-much.svg' width='320' alt='The Biggest Problem With Gemini 4 Argon. It Thinks Too Much.'>
+  </a>
   <a href='articles/secrets-hiding-in-commit-history-and-github-supports-silence.md' style='text-decoration:none;'>
     <img src='articles/cards/secrets-hiding-in-commit-history-and-github-supports-silence.svg' width='320' alt='Secrets hiding in commit history, and GitHub Support&#x27;s silence'>
   </a>
