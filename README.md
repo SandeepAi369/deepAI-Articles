@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**30 Articles**
+**31 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/the-shift-to-agentic-ai-part-3-meet-the-founder.md' style='text-decoration:none;'>
+    <img src='articles/cards/the-shift-to-agentic-ai-part-3-meet-the-founder.svg' width='320' alt='The Shift to Agentic AI Part 3: Meet The Founder'>
+  </a>
   <a href='articles/the-biggest-problem-with-gemini-4-argon-it-thinks-too-much.md' style='text-decoration:none;'>
     <img src='articles/cards/the-biggest-problem-with-gemini-4-argon-it-thinks-too-much.svg' width='320' alt='The Biggest Problem With Gemini 4 Argon. It Thinks Too Much.'>
   </a>
