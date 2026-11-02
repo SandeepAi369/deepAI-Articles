@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**31 Articles**
+**32 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/why-i-stopped-my-project-to-speed-up-talkback.md' style='text-decoration:none;'>
+    <img src='articles/cards/why-i-stopped-my-project-to-speed-up-talkback.svg' width='320' alt='Why I Stopped My Project to Speed Up TalkBack'>
+  </a>
   <a href='articles/the-shift-to-agentic-ai-part-3-meet-the-founder.md' style='text-decoration:none;'>
     <img src='articles/cards/the-shift-to-agentic-ai-part-3-meet-the-founder.svg' width='320' alt='The Shift to Agentic AI Part 3: Meet The Founder'>
   </a>
