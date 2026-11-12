@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**32 Articles**
+**33 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/a-sudden-policy-change-wiped-our-entire-database-how-i-rebuilt-a-10-15-year-free-website-on-a-0-arch.md' style='text-decoration:none;'>
+    <img src='articles/cards/a-sudden-policy-change-wiped-our-entire-database-how-i-rebuilt-a-10-15-year-free-website-on-a-0-arch.svg' width='320' alt='A Sudden Policy Change Wiped Our Entire Database: How I Rebuilt a 10-15 Year Free Website on a ₹0 Architecture'>
+  </a>
   <a href='articles/why-i-stopped-my-project-to-speed-up-talkback.md' style='text-decoration:none;'>
     <img src='articles/cards/why-i-stopped-my-project-to-speed-up-talkback.svg' width='320' alt='Why I Stopped My Project to Speed Up TalkBack'>
   </a>
