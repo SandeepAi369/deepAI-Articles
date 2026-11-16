@@ -2,11 +2,14 @@
 
 > Auto-synced from Supabase · Updated daily via GitHub Actions
 
-**33 Articles**
+**34 Articles**
 
 ---
 <div align='center'>
 
+  <a href='articles/-how-i-fixed-two-hidden-bugs-in-wreq-while-updating-my-search-engine.md' style='text-decoration:none;'>
+    <img src='articles/cards/-how-i-fixed-two-hidden-bugs-in-wreq-while-updating-my-search-engine.svg' width='320' alt='# How I Fixed Two Hidden Bugs in wreq While Updating My Search Engine'>
+  </a>
   <a href='articles/a-sudden-policy-change-wiped-our-entire-database-how-i-rebuilt-a-10-15-year-free-website-on-a-0-arch.md' style='text-decoration:none;'>
     <img src='articles/cards/a-sudden-policy-change-wiped-our-entire-database-how-i-rebuilt-a-10-15-year-free-website-on-a-0-arch.svg' width='320' alt='A Sudden Policy Change Wiped Our Entire Database: How I Rebuilt a 10-15 Year Free Website on a ₹0 Architecture'>
   </a>
