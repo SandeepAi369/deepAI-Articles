@@ -188,6 +188,14 @@
         "indexnow": "2026-11-12T22:28:25Z",
         "websub": "2026-11-12T22:28:27Z"
       }
+    },
+    "https://xel-studio.vercel.app/articles/1794841884925-1lp0i1nqh": {
+      "title": "# How I Fixed Two Hidden Bugs in wreq While Updating My Search Engine",
+      "first_seen": "2026-11-16T15:11:41Z",
+      "done": {
+        "indexnow": "2026-11-16T15:11:42Z",
+        "websub": "2026-11-16T15:11:44Z"
+      }
     }
   }
 }
